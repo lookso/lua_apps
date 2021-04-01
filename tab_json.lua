@@ -1,0 +1,31 @@
+-- local cjson = require "cjson"
+-- local t = {
+--     a = "hello",
+--     b = "world",
+--     c = 123456,
+--     d = "123456",
+--     e = {"hhh", "11", "22"},
+--     f = {
+--         a = "hello",
+--         b = "world",
+--         c = 123456,
+--         d = "123456",
+--         e = {"hhh", "11", "22"},
+--         count = 0
+--     }
+-- }
+-- local tm1 = os.time()
+-- local str_json = ""
+-- for i = 1, 50000, 1 do
+--     --str_json = json.encode(t)
+--     --t = json.decode(str_json)
+--     str_json = cjson.encode(t)
+--     t = cjson.decode(str_json)
+--     t.f.count = t.f.count + 1
+-- end
+-- local tm2 = os.time()
+-- print("tm1:" .. tm1 .. ",tm2:" .. tm2 .. ",dt:" .. (tm2 - tm1))
+-- print(str_json)
+
+local test = { ["domain_name"] = "alarm_1", ["intent_id"] = 1, ["intent_name"] = "delete_alarm" }
+table.remove(test,test["domain_name"])
